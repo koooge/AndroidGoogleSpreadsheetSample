@@ -65,6 +65,11 @@ class MainActivity : AppCompatActivity() {
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
 
+     private fun signOut() {
+        mGoogleSignInClient.signOut()
+    }
+
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -73,6 +78,7 @@ class MainActivity : AppCompatActivity() {
             handleSignInResult(task)
         }
     }
+
 
     private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
         try {
