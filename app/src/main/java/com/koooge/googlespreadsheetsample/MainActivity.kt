@@ -17,8 +17,10 @@ import com.google.android.material.snackbar.Snackbar
 
 
 class MainActivity : AppCompatActivity() {
-    private val TAG = "MainActivity"
-    private val RC_SIGN_IN = 1
+    companion object {
+        private val TAG = MainActivity::class.java.simpleName
+        private val RC_SIGN_IN = 1
+    }
     lateinit var mGoogleSignInClient: GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
