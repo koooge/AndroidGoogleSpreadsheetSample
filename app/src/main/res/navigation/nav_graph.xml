@@ -6,6 +6,12 @@
     app:startDestination="@id/FirstFragment">
 
     <fragment
+        android:id="@+id/signin_fragment"
+        android:name="com.koooge.googlespreadsheetsample.SignInFragment"
+        android:label="signin_fragment"
+        tools:layout="@layout/fragment_signin" />
+
+    <fragment
         android:id="@+id/FirstFragment"
         android:name="com.koooge.googlespreadsheetsample.FirstFragment"
         android:label="@string/first_fragment_label"
